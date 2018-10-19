@@ -32,11 +32,10 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 /**
- *
  * @author kon5760
  */
 public class SampleAssertionsTest {
-    
+
     @Test
     public void testAssetThatExamples() {
 
@@ -106,7 +105,7 @@ public class SampleAssertionsTest {
 
     @Test
     public void testAssertThatEveryItemContainsString() {
-        assertThat(Arrays.asList(new String[] { "fun", "ban", "net" }), everyItem(containsString("n")));
+        assertThat(Arrays.asList(new String[]{"fun", "ban", "net"}), everyItem(containsString("n")));
     }
 
     // Core Hamcrest Matchers with assertThat
@@ -115,7 +114,7 @@ public class SampleAssertionsTest {
         assertThat("good", allOf(equalTo("good"), startsWith("good")));
         assertThat("good", not(allOf(equalTo("bad"), equalTo("good"))));
         assertThat("good", anyOf(equalTo("bad"), equalTo("good")));
-        assertThat(7, not(CombinableMatcher.<Integer> either(equalTo(3)).or(equalTo(4))));
+        assertThat(7, not(CombinableMatcher.<Integer>either(equalTo(3)).or(equalTo(4))));
         assertThat(new Object(), not(sameInstance(new Object())));
     }
 
@@ -125,7 +124,7 @@ public class SampleAssertionsTest {
     }
 
     //Collections
-    
+
     @Test
     public void testAny() {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);

@@ -6,8 +6,13 @@
 package sample.tec.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
+import sample.tec.Program;
 import sample.tec.util.MessageUtil;
+
 
 /**
  *
@@ -21,5 +26,11 @@ public class BasicExampleTest {
    @Test
    public void testPrintMessage() {
       assertEquals(message, messageUtil.printMessage());
+   }
+
+   @Test
+   public void testNotNull() {
+       Program p = new Program();
+       assertThat(p, CoreMatchers.notNullValue());
    }
 }
