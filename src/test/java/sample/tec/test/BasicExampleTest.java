@@ -16,7 +16,7 @@ import sample.tec.util.MessageUtil;
 public class BasicExampleTest {
     
    private String message = "Hello World";	
-   private MessageUtil messageUtil = new MessageUtil("Hello world wolrd");
+   private MessageUtil messageUtil = new MessageUtil("Hello world");
 
    @Test
    public void testPrintMessage() {
